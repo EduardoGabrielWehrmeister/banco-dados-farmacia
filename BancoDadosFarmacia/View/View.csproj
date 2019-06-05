@@ -46,14 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ComestivelCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ComestivelCadastro.Designer.cs">
+      <DependentUpon>ComestivelCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComestivelEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComestivelEditar.Designer.cs">
+      <DependentUpon>ComestivelEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComestivelLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComestivelLista.Designer.cs">
+      <DependentUpon>ComestivelLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComestivelPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComestivelPrincipal.Designer.cs">
+      <DependentUpon>ComestivelPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComestivelCadastro.resx">
+      <DependentUpon>ComestivelCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComestivelEditar.resx">
+      <DependentUpon>ComestivelEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComestivelLista.resx">
+      <DependentUpon>ComestivelLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComestivelPrincipal.resx">
+      <DependentUpon>ComestivelPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

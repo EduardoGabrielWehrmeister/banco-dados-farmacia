@@ -53,7 +53,7 @@ namespace Repositorio
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "SELECT * FROM filmes WHERE id = @ID";
+            comando.CommandText = "SELECT * FROM comestiveis WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", id);
 
@@ -85,9 +85,9 @@ namespace Repositorio
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
 
-            comando.CommandText = @"INSERT INTO comestiveis (nome, valor data_vencimento, quantidade, marca) VALUES (@NOME, @VALOR, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA)";
+            comando.CommandText = @"INSERT INTO comestiveis (nome, valor, data_vencimento, quantidade, marca) VALUES (@NOME, @VALOR, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA)";
             comando.Parameters.AddWithValue("@NOME", comestivel.Nome);
-            comando.Parameters.AddWithValue("@VALOR",comestivel.Marca);
+            comando.Parameters.AddWithValue("@VALOR",comestivel.Valor);
             comando.Parameters.AddWithValue("@DATA_VENCIMENTO", comestivel.DataVencimento);
             comando.Parameters.AddWithValue("@QUANTIDADE", comestivel.Quantidade);
             comando.Parameters.AddWithValue("@MARCA", comestivel.Marca);
@@ -99,7 +99,7 @@ namespace Repositorio
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaDeConexao;
-            conexao.Close();
+            conexao.Open();
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
@@ -117,11 +117,12 @@ namespace Repositorio
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "UPDATE comestiveis SET nome = @NOME, valor = @VALOR, data_vencimento = @DATA_VENCIMENTO, quantidade = @QUANTIDADE, marca = @MARCA WHERE id, @ID";
+            comando.CommandText = "UPDATE comestiveis SET nome = @NOME, valor = @VALOR, data_vencimento = @DATA_VENCIMENTO, quantidade = @QUANTIDADE, marca = @MARCA WHERE id = @ID";
             comando.Parameters.AddWithValue("@NOME", comestivel.Nome);
             comando.Parameters.AddWithValue("@VALOR", comestivel.Valor);
             comando.Parameters.AddWithValue("@DATA_VENCIMENTO", comestivel.DataVencimento);
             comando.Parameters.AddWithValue("@QUANTIDADE", comestivel.Quantidade);
+            comando.Parameters.AddWithValue("@MARCA", comestivel.Marca);
             comando.Parameters.AddWithValue("@ID", comestivel.Id);
             comando.ExecuteNonQuery();
             conexao.Close();

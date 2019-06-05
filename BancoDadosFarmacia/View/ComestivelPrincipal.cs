@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class Form1 : Form
+    public partial class ComestivelPrincipal : Form
     {
-        public Form1()
+        public ComestivelPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrarComestivel_Click(object sender, EventArgs e)
+        {
+            ComestivelLista form = new ComestivelLista();
+            form.ShowDialog();
         }
     }
 }
