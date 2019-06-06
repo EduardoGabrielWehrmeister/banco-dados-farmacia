@@ -38,7 +38,6 @@ namespace View
             comestivel.Nome = txtNome.Text;
             comestivel.DataVencimento = Convert.ToDateTime(dtpDataVencimento.Text);
             comestivel.Marca = txtMarca.Text;
-            repositorio.Atualizar(comestivel);
 
             if (txtNome.Text.Length < 3)
             {
@@ -74,6 +73,7 @@ namespace View
 
             MessageBox.Show("Editado com Sucesso.");
             Close();
+            repositorio.Atualizar(comestivel);
         }
     }
 }

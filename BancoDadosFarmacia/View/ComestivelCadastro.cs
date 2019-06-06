@@ -25,8 +25,6 @@ namespace View
             comestivel.Nome = txtNome.Text;
             comestivel.DataVencimento = Convert.ToDateTime(dtpDataVencimento.Text);
             comestivel.Marca = txtMarca.Text;
-            ComestivelRepositorio repositorio = new ComestivelRepositorio();
-            repositorio.Inserir(comestivel);
 
             if (txtNome.Text.Length < 3)
             {
@@ -57,8 +55,12 @@ namespace View
             if(txtMarca.Text.Length < 3)
             {
                 MessageBox.Show("Informe ao menos 3 caracteres no campo MARCA");
+                txtMarca.Focus();return;
             }
             Close();
+
+            ComestivelRepositorio repositorio = new ComestivelRepositorio();
+            repositorio.Inserir(comestivel);
         }
     }
 }
