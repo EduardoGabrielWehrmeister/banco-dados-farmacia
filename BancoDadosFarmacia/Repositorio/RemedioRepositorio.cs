@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repositorio
 {
-    class RemedioRepositorio
+    public class RemedioRepositorio
     {
         string CadeiaDeConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\65973\Documents\BancoFarmacia.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -81,7 +81,7 @@ namespace Repositorio
             return null;
         }
 
-        private void Inserir(Remedio remedio)
+        public void Inserir(Remedio remedio)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaDeConexao;
@@ -104,7 +104,7 @@ solido = @SOLIDO, contra_indicacao = @CONTRA_INDICACAO, bula = @BULA, faixa = @F
             conexao.Close();
         }
 
-        private void Apagar(int id)
+        public void Apagar(int id)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaDeConexao;
@@ -115,11 +115,11 @@ solido = @SOLIDO, contra_indicacao = @CONTRA_INDICACAO, bula = @BULA, faixa = @F
 
             comando.CommandText = "DELETE FROM remedios WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
-            comando. ExecuteNonQuery();
+            comando.ExecuteNonQuery();
             conexao.Close();
         }
 
-        private void Atualizar(Remedio remedio)
+        public void Atualizar(Remedio remedio)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaDeConexao;

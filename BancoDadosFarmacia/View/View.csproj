@@ -72,6 +72,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemedioCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemedioCadastro.Designer.cs">
+      <DependentUpon>RemedioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemedioEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemedioEditar.Designer.cs">
+      <DependentUpon>RemedioEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemedioLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemedioLista.Designer.cs">
+      <DependentUpon>RemedioLista.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ComestivelCadastro.resx">
       <DependentUpon>ComestivelCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +111,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RemedioCadastro.resx">
+      <DependentUpon>RemedioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemedioEditar.resx">
+      <DependentUpon>RemedioEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemedioLista.resx">
+      <DependentUpon>RemedioLista.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

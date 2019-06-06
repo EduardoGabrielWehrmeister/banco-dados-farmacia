@@ -22,5 +22,11 @@ namespace View
             ComestivelLista form = new ComestivelLista();
             form.ShowDialog();
         }
+
+        private void btnCadastrarRemedios_Click(object sender, EventArgs e)
+        {
+            RemedioLista form = new RemedioLista();
+            form.ShowDialog();
+        }
     }
 }
