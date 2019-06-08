@@ -61,6 +61,7 @@ namespace View
 
             ComestivelRepositorio repositorio = new ComestivelRepositorio();
             repositorio.Inserir(comestivel);
+            MessageBox.Show("Registro Criado com sucesso");
         }
     }
 }

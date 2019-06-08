@@ -37,8 +37,8 @@
             this.lblBula = new System.Windows.Forms.Label();
             this.rbGenericoSim = new System.Windows.Forms.RadioButton();
             this.rbGenericoNao = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tbSolidoSim = new System.Windows.Forms.RadioButton();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.rbSolidoSim = new System.Windows.Forms.RadioButton();
             this.rbSolidoNao = new System.Windows.Forms.RadioButton();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.lblReceita = new System.Windows.Forms.Label();
@@ -149,27 +149,26 @@
             this.rbGenericoNao.TabStop = true;
             this.rbGenericoNao.Text = "Não";
             this.rbGenericoNao.UseVisualStyleBackColor = true;
-            this.rbGenericoNao.CheckedChanged += new System.EventHandler(this.rbGenericoNao_CheckedChanged);
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 31);
-            this.textBox1.TabIndex = 10;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(9, 37);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(295, 31);
+            this.txtNome.TabIndex = 10;
             // 
-            // tbSolidoSim
+            // rbSolidoSim
             // 
-            this.tbSolidoSim.AutoSize = true;
-            this.tbSolidoSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSolidoSim.Location = new System.Drawing.Point(6, 28);
-            this.tbSolidoSim.Name = "tbSolidoSim";
-            this.tbSolidoSim.Size = new System.Drawing.Size(66, 29);
-            this.tbSolidoSim.TabIndex = 11;
-            this.tbSolidoSim.TabStop = true;
-            this.tbSolidoSim.Text = "Sim";
-            this.tbSolidoSim.UseVisualStyleBackColor = true;
+            this.rbSolidoSim.AutoSize = true;
+            this.rbSolidoSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSolidoSim.Location = new System.Drawing.Point(6, 28);
+            this.rbSolidoSim.Name = "rbSolidoSim";
+            this.rbSolidoSim.Size = new System.Drawing.Size(66, 29);
+            this.rbSolidoSim.TabIndex = 11;
+            this.rbSolidoSim.TabStop = true;
+            this.rbSolidoSim.Text = "Sim";
+            this.rbSolidoSim.UseVisualStyleBackColor = true;
             // 
             // rbSolidoNao
             // 
@@ -294,7 +293,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblSolido);
-            this.groupBox3.Controls.Add(this.tbSolidoSim);
+            this.groupBox3.Controls.Add(this.rbSolidoSim);
             this.groupBox3.Controls.Add(this.rbSolidoNao);
             this.groupBox3.Location = new System.Drawing.Point(327, 242);
             this.groupBox3.Name = "groupBox3";
@@ -327,7 +326,7 @@
             this.Controls.Add(this.rtbContraIndicacao);
             this.Controls.Add(this.cbFaixa);
             this.Controls.Add(this.cbCategoria);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblBula);
             this.Controls.Add(this.lblContraIndicacao);
             this.Controls.Add(this.lblFaixa);
@@ -357,8 +356,8 @@
         private System.Windows.Forms.Label lblBula;
         private System.Windows.Forms.RadioButton rbGenericoSim;
         private System.Windows.Forms.RadioButton rbGenericoNao;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton tbSolidoSim;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.RadioButton rbSolidoSim;
         private System.Windows.Forms.RadioButton rbSolidoNao;
         private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Label lblReceita;

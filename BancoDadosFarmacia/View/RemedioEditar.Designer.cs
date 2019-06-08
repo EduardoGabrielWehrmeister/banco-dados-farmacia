@@ -31,13 +31,13 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblSolido = new System.Windows.Forms.Label();
-            this.tbSolidoSim = new System.Windows.Forms.RadioButton();
+            this.rbSolidoSim = new System.Windows.Forms.RadioButton();
             this.rbSolidoNao = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblGenerico = new System.Windows.Forms.Label();
             this.rbGenericoSim = new System.Windows.Forms.RadioButton();
             this.rbGenericoNao = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbPrecisaReceita = new System.Windows.Forms.GroupBox();
             this.lblReceita = new System.Windows.Forms.Label();
             this.rbPrecisaReceitaSim = new System.Windows.Forms.RadioButton();
             this.rbPrecisaReceitaNao = new System.Windows.Forms.RadioButton();
@@ -45,7 +45,7 @@
             this.rtbContraIndicacao = new System.Windows.Forms.RichTextBox();
             this.cbFaixa = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblBula = new System.Windows.Forms.Label();
             this.lblContraIndicacao = new System.Windows.Forms.Label();
             this.lblFaixa = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbPrecisaReceita.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -67,11 +67,12 @@
             this.btnSalvar.TabIndex = 37;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblSolido);
-            this.groupBox3.Controls.Add(this.tbSolidoSim);
+            this.groupBox3.Controls.Add(this.rbSolidoSim);
             this.groupBox3.Controls.Add(this.rbSolidoNao);
             this.groupBox3.Location = new System.Drawing.Point(327, 242);
             this.groupBox3.Name = "groupBox3";
@@ -90,17 +91,17 @@
             this.lblSolido.TabIndex = 3;
             this.lblSolido.Text = "Sólido";
             // 
-            // tbSolidoSim
+            // rbSolidoSim
             // 
-            this.tbSolidoSim.AutoSize = true;
-            this.tbSolidoSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSolidoSim.Location = new System.Drawing.Point(6, 28);
-            this.tbSolidoSim.Name = "tbSolidoSim";
-            this.tbSolidoSim.Size = new System.Drawing.Size(66, 29);
-            this.tbSolidoSim.TabIndex = 11;
-            this.tbSolidoSim.TabStop = true;
-            this.tbSolidoSim.Text = "Sim";
-            this.tbSolidoSim.UseVisualStyleBackColor = true;
+            this.rbSolidoSim.AutoSize = true;
+            this.rbSolidoSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSolidoSim.Location = new System.Drawing.Point(6, 28);
+            this.rbSolidoSim.Name = "rbSolidoSim";
+            this.rbSolidoSim.Size = new System.Drawing.Size(66, 29);
+            this.rbSolidoSim.TabIndex = 11;
+            this.rbSolidoSim.TabStop = true;
+            this.rbSolidoSim.Text = "Sim";
+            this.rbSolidoSim.UseVisualStyleBackColor = true;
             // 
             // rbSolidoNao
             // 
@@ -161,17 +162,17 @@
             this.rbGenericoNao.Text = "Não";
             this.rbGenericoNao.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbPrecisaReceita
             // 
-            this.groupBox1.Controls.Add(this.lblReceita);
-            this.groupBox1.Controls.Add(this.rbPrecisaReceitaSim);
-            this.groupBox1.Controls.Add(this.rbPrecisaReceitaNao);
-            this.groupBox1.Location = new System.Drawing.Point(327, 37);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(461, 96);
-            this.groupBox1.TabIndex = 34;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gbPrecisaReceita.Controls.Add(this.lblReceita);
+            this.gbPrecisaReceita.Controls.Add(this.rbPrecisaReceitaSim);
+            this.gbPrecisaReceita.Controls.Add(this.rbPrecisaReceitaNao);
+            this.gbPrecisaReceita.Location = new System.Drawing.Point(327, 37);
+            this.gbPrecisaReceita.Name = "gbPrecisaReceita";
+            this.gbPrecisaReceita.Size = new System.Drawing.Size(461, 96);
+            this.gbPrecisaReceita.TabIndex = 34;
+            this.gbPrecisaReceita.TabStop = false;
+            this.gbPrecisaReceita.Text = "groupBox1";
             // 
             // lblReceita
             // 
@@ -256,13 +257,13 @@
             this.cbCategoria.Size = new System.Drawing.Size(295, 33);
             this.cbCategoria.TabIndex = 30;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 31);
-            this.textBox1.TabIndex = 29;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(9, 34);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(295, 31);
+            this.txtNome.TabIndex = 29;
             // 
             // lblBula
             // 
@@ -283,7 +284,6 @@
             this.lblContraIndicacao.Size = new System.Drawing.Size(185, 25);
             this.lblContraIndicacao.TabIndex = 27;
             this.lblContraIndicacao.Text = "Contra Indicações";
-            this.lblContraIndicacao.Click += new System.EventHandler(this.lblContraIndicacao_Click);
             // 
             // lblFaixa
             // 
@@ -344,12 +344,12 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbPrecisaReceita);
             this.Controls.Add(this.rtbBula);
             this.Controls.Add(this.rtbContraIndicacao);
             this.Controls.Add(this.cbFaixa);
             this.Controls.Add(this.cbCategoria);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblBula);
             this.Controls.Add(this.lblContraIndicacao);
             this.Controls.Add(this.lblFaixa);
@@ -361,8 +361,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbPrecisaReceita.ResumeLayout(false);
+            this.gbPrecisaReceita.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,13 +373,13 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblSolido;
-        private System.Windows.Forms.RadioButton tbSolidoSim;
+        private System.Windows.Forms.RadioButton rbSolidoSim;
         private System.Windows.Forms.RadioButton rbSolidoNao;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblGenerico;
         private System.Windows.Forms.RadioButton rbGenericoSim;
         private System.Windows.Forms.RadioButton rbGenericoNao;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbPrecisaReceita;
         private System.Windows.Forms.Label lblReceita;
         private System.Windows.Forms.RadioButton rbPrecisaReceitaSim;
         private System.Windows.Forms.RadioButton rbPrecisaReceitaNao;
@@ -387,7 +387,7 @@
         private System.Windows.Forms.RichTextBox rtbContraIndicacao;
         private System.Windows.Forms.ComboBox cbFaixa;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblBula;
         private System.Windows.Forms.Label lblContraIndicacao;
         private System.Windows.Forms.Label lblFaixa;

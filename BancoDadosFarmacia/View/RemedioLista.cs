@@ -51,5 +51,16 @@ namespace View
         {
             AtualizarTabela();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            RemedioRepositorio repositorio = new RemedioRepositorio();
+            Remedio remedio = repositorio.ObterPeloId(id);
+
+            RemedioEditar remedioEditar = new RemedioEditar(remedio);
+            remedioEditar.ShowDialog();
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Repositorio
 {
     public class ComestivelRepositorio
     {
-        string CadeiaDeConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\65973\Documents\BancoFarmacia.mdf;Integrated Security=True;Connect Timeout=30";
+        string CadeiaDeConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Pichau\Documents\Exemplo01.mdf;Integrated Security=True;Connect Timeout=30";
 
         public List<Comestivel> ObterTodos()
         {

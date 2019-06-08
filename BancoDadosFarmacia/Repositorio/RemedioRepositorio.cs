@@ -11,7 +11,7 @@ namespace Repositorio
 {
     public class RemedioRepositorio
     {
-        string CadeiaDeConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\65973\Documents\BancoFarmacia.mdf;Integrated Security=True;Connect Timeout=30";
+        string CadeiaDeConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Pichau\Documents\Exemplo01.mdf;Integrated Security=True;Connect Timeout=30";
 
         public List<Remedio> ObterTodos()
         {
@@ -90,8 +90,7 @@ namespace Repositorio
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
 
-            comando.CommandText = @"INSERT INTO remedios (nome, generico, categoria, solido, contra_indicacao, bula, faixa, receita) VALUES (nome = @NOME, generico = @GENERICO, categoria = @CATEGORIA,
-solido = @SOLIDO, contra_indicacao = @CONTRA_INDICACAO, bula = @BULA, faixa = @FAIXA, receita = @RECEITA)";
+            comando.CommandText = @"INSERT INTO remedios (nome, generico, categoria, solido, contra_indicacao, bula, faixa, receita) VALUES (@NOME, @GENERICO, @CATEGORIA, @SOLIDO, @CONTRA_INDICACAO, @BULA, @FAIXA, @RECEITA)";
             comando.Parameters.AddWithValue("@NOME", remedio.Nome);
             comando.Parameters.AddWithValue("@GENERICO", remedio.Generico);
             comando.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);
@@ -127,9 +126,9 @@ solido = @SOLIDO, contra_indicacao = @CONTRA_INDICACAO, bula = @BULA, faixa = @F
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = @"UPDATE remedios SET nome = @NOME, generico = @GENERICO, categoria = @CATEGORIA, solido = @SOLIDO, contra_inicacao = @CONTRA_INDICACAO, bula = @BULA, faixa = @FAIXA,
+            comando.CommandText = @"UPDATE remedios SET nome = @NOME, generico = @GENERICO, categoria = @CATEGORIA, solido = @SOLIDO, contra_indicacao = @CONTRA_INDICACAO, bula = @BULA, faixa = @FAIXA,
 receita = @RECEITA WHERE id = @ID";
-            comando.Parameters.AddWithValue("@NOME,", remedio.Nome);
+            comando.Parameters.AddWithValue("@NOME", remedio.Nome);
             comando.Parameters.AddWithValue("@GENERICO", remedio.Generico);
             comando.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);
             comando.Parameters.AddWithValue("@SOLIDO", remedio.Solido);
